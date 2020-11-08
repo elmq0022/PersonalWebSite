@@ -14,11 +14,12 @@ psycopg2 = "*"
 python = "3.8"
 
 [dev-packages]
+black = "*"
+coverage = "*"
+isort = "*"
+pylint = "*"
 pytest = "*"
 pytest-django = "*"
-black = "*"
-pylint = "*"
-isort = "*"
 
 [pipenv]
 allow_prereleases = true
