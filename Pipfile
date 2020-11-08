@@ -9,6 +9,7 @@ django-filebrowser = "*"
 django-tinymce = "*"   
 djangorestframework = "*"   
 psycopg2 = "*"
+gunicorn = "*"
 
 [requires]
 python = "3.8"
