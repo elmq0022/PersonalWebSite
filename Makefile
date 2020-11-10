@@ -2,7 +2,7 @@ runserver:
 		pipenv run ./manage.py runserver
 
 check:
-		pipenv run ./mange.py check
+		pipenv run ./manage.py check
 
 makemigrations:
 		pipenv run ./manage.py makemigrations
