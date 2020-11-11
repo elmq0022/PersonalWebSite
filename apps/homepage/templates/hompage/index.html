@@ -1,1 +1,8 @@
-Welcome to Elmquist.Dev
+<p>Welcome to Elmquist.Dev</p>
+
+<p>Latest Blog Posts</p>
+{% for article in last_five_articles %}
+<li><a href="{% url 'blog:detail' article.id %}">{{ article.title }}</a></li>
+{% endfor %}
+
+
