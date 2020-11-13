@@ -1,4 +1,6 @@
 from django.views import generic
+from django.utils import timezone
+
 from .models import Article
 
 
@@ -12,5 +14,4 @@ class ArticleListView(generic.ListView):
     template_name = 'blog/article_list.html'
     model = Article
     context_object_name = 'articles'
-    queryset = Article.objects.order_by('-published')
-
+    queryset = Article.published_articles
