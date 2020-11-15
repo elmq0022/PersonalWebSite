@@ -2,4 +2,17 @@ from django.contrib import admin
 from .models import Article
 
 
-admin.site.register(Article)
+class ArticleAdmin(admin.ModelAdmin):
+    exclude = (
+        "edited_date",
+        "published_date",
+    )
+
+    fields = (
+        "title",
+        "post",
+        "is_published",
+    )
+
+
+admin.site.register(Article, ArticleAdmin)
