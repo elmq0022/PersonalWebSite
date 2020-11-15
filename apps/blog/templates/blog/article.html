@@ -1,6 +1,5 @@
-<p> this is my article </p>
-
 <p><h3>{{ article.title }}</h3></p>
+<p> Published: {{ article.published_date | date:"M j, Y"}} </p>
 
 {{ article.post|safe }}
 
