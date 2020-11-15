@@ -135,3 +135,5 @@ STATICFILES_DIRS = []
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+
+TINYMCE_JS_URL = STATIC_URL + "javascript/tiny_mce"
