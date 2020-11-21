@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Article
+from .models import Article, Tag
 
 
 class ArticleAdmin(admin.ModelAdmin):
@@ -10,9 +10,11 @@ class ArticleAdmin(admin.ModelAdmin):
 
     fields = (
         "title",
+        "tags",
         "post",
         "is_published",
     )
 
 
 admin.site.register(Article, ArticleAdmin)
+admin.site.register(Tag)
