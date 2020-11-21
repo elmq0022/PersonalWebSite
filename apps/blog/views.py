@@ -14,4 +14,4 @@ class ArticleListView(generic.ListView):
     template_name = 'blog/article_list.html'
     model = Article
     context_object_name = 'articles'
-    queryset = Article.published_articles
+    queryset = Article.published.all()

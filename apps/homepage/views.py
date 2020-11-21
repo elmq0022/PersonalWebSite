@@ -8,6 +8,6 @@ class HomePageView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['last_five_articles'] = Article.published_articles()[:5]
+        context['last_five_articles'] = Article.published.all()[:5]
         return context
         
