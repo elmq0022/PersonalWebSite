@@ -27,7 +27,7 @@ class Article(models.Model):
     post = HTMLField()
     published_date = models.DateTimeField(null=True, blank=True)
     title = models.CharField(null=False, max_length=200)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, related_name='articles')
 
     objects = models.Manager()
     published = PublishedManager()

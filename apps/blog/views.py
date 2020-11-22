@@ -1,7 +1,18 @@
 from django.views import generic
 from django.utils import timezone
+from django.db.models import Prefetch
 
-from .models import Article
+from .models import Article, Tag
+
+class TagsView(generic.ListView):
+    template_name = 'blog/index.html'
+    context_object_name = 'tags'
+    queryset = Tag.objects.prefetch_related(
+        Prefetch(
+            'articles',
+            queryset=Article.published.all()
+        )
+    )
 
 
 class ArticleDetailView(generic.DetailView):
