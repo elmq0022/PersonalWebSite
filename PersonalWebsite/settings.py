@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # third party apps
+    'rest_framework',
     'tinymce',
     # project
     'apps.homepage',
@@ -136,4 +137,17 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
+"""
+3rd Party Settings
+"""
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
+}
+
 TINYMCE_JS_URL = STATIC_URL + "tinymce/tinymce.min.js"
+
