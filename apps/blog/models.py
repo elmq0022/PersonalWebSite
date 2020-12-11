@@ -30,8 +30,7 @@ class Article(models.Model):
     tags = models.ManyToManyField(Tag, related_name='articles')
 
     objects = models.Manager()
-    published = PublishedManager()
-    
+    published = PublishedManager()    
 
     def save(self, *args, **kwargs):
         if self.is_published and self.published_date is None:

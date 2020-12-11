@@ -34,6 +34,8 @@ class UserViewSet(viewsets.ModelViewSet):
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
 
+from apps.blog.api import ArticleViewSet
+router.register(r'blog', ArticleViewSet)
 
 urlpatterns = [
     path('', include('apps.homepage.urls')),
@@ -42,7 +44,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
 
-    # thrid party
+    # thrid partyd
     path('api-auth/', include('rest_framework.urls')),
     path('tinymce/', include('tinymce.urls')),
 ]
