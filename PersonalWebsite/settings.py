@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # third party apps
     'rest_framework',
     'tinymce',
+    'corsheaders',
     # project
     'apps.homepage',
     'apps.about',
@@ -48,6 +49,11 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    # for cors headers
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
+    # standard django middleware
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -149,5 +155,9 @@ REST_FRAMEWORK = {
     ]
 }
 
-TINYMCE_JS_URL = STATIC_URL + "tinymce/tinymce.min.js"
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost",
+    "http://localhost:3000",
+]
 
+TINYMCE_JS_URL = STATIC_URL + "tinymce/tinymce.min.js"
