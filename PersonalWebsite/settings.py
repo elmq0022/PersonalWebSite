@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
+def split_env_var(name, delimiter=","):
+    return tuple(item.strip() for item in os.environ[name].split(delimiter))
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,7 +30,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ['DEBUG'] == 'True'
 
-ALLOWED_HOSTS = [h.strip() for h in os.environ['ALLOWED_HOSTS'].split(',')]
+ALLOWED_HOSTS = split_env_var('ALLOWED_HOSTS')
 
 
 # Application definition
@@ -155,9 +159,6 @@ REST_FRAMEWORK = {
     ]
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost",
-    "http://localhost:3000",
-]
+CORS_ALLOWED_ORIGINS = split_env_var('CORS_ALLOWED_ORIGINS')
 
 TINYMCE_JS_URL = STATIC_URL + "tinymce/tinymce.min.js"
