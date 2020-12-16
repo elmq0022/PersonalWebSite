@@ -8,6 +8,7 @@ class ArticleSerializer(serializers.ModelSerializer):
         fields = [
             "title",
             "post",
+            "pk",
         ]
 
 
