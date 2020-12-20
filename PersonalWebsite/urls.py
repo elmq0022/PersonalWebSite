@@ -3,6 +3,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('blog/', include('apps.blog.urls')),
+    path('content/', include('apps.content.urls')),
     path('admin/', admin.site.urls),
 
     # thrid partyd

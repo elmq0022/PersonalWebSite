@@ -1,5 +1,4 @@
 from django.db.models import Prefetch
-from django.utils import timezone
 from rest_framework import generics
 
 from .models import Article, Tag
