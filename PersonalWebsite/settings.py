@@ -46,9 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'tinymce',
     'corsheaders',
-    # project
-    'apps.homepage',
-    'apps.about',
+    # apps
     'apps.blog',
 ]
 
