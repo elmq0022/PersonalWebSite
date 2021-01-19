@@ -12,6 +12,7 @@ class ArticleAdmin(admin.ModelAdmin):
         "title",
         "tags",
         "post",
+        "is_featured",
         "is_published",
     )
 

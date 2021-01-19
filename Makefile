@@ -4,7 +4,7 @@ runserver:
 check:
 		pipenv run ./manage.py check
 
-makemigrations:
+migrations:
 		pipenv run ./manage.py makemigrations
 
 migrate:
