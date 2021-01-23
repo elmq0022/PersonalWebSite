@@ -24,6 +24,7 @@ isort = "*"
 pylint = "*"
 pytest = "*"
 pytest-django = "*"
+pylint-django = "*"
 
 [pipenv]
 allow_prereleases = true
