@@ -1,6 +1,7 @@
-from .models import Article, Tag
-from rest_framework import serializers
 from django.utils.text import Truncator
+from rest_framework import serializers
+
+from .models import Article, Tag
 
 
 class ArticleListSerializer(serializers.ModelSerializer):

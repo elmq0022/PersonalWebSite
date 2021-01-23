@@ -1,5 +1,6 @@
 from django.core.management.base import BaseCommand, CommandError
-from apps.content.models import About, Resume, Projects
+
+from apps.content.models import About, Projects, Resume
 
 
 class Command(BaseCommand):

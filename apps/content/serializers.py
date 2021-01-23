@@ -1,5 +1,6 @@
-from .models import About, Resume, Projects
 from rest_framework import serializers
+
+from .models import About, Projects, Resume
 
 
 class AboutSerializer(serializers.ModelSerializer):

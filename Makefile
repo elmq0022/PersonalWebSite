@@ -17,8 +17,8 @@ test:
 		@echo "Not Implemented"
 
 format:
-		pipenv run isort -rc -tc --atomic .	
-		pipenv run black .\
+		pipenv run isort . 
+		pipenv run black .
 		
 lint:
-		pipenv run pylint --load-plugins=pylint_django ./apps
+		pipenv run pylint ./apps

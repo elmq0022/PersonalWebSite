@@ -1,10 +1,9 @@
 from django.db.models import Prefetch, query
-from rest_framework import generics
-from rest_framework import pagination
+from rest_framework import generics, pagination
 from rest_framework.pagination import PageNumberPagination
 
 from .models import Article, Tag
-from .serializers import ArticleSerializer, ArticleListSerializer, TagSerializer
+from .serializers import ArticleListSerializer, ArticleSerializer, TagSerializer
 
 
 class TagListView(generics.ListAPIView):
