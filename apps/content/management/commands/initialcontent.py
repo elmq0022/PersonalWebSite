@@ -3,7 +3,10 @@ from apps.content.models import About, Resume, Projects
 
 
 class Command(BaseCommand):
-    help = "creates the intial instances of the content instances" "so they can be edited in the admin"
+    help = (
+        "creates the intial instances of the content instances"
+        "so they can be edited in the admin"
+    )
 
     def handle(self, *args, **options):
         about, _ = About.objects.get_or_create(pk=1)

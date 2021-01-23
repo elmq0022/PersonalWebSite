@@ -5,16 +5,16 @@ from rest_framework import serializers
 class AboutSerializer(serializers.ModelSerializer):
     class Meta:
         model = About
-        fields = ("content", )
+        fields = ("content",)
 
 
 class ProjectsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Projects
-        fields = ("content", )  
+        fields = ("content",)
 
 
 class ResumeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Resume
-        fields = ("content", )
+        fields = ("content",)
