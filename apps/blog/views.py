@@ -7,9 +7,7 @@ from .serializers import ArticleListSerializer, ArticleSerializer, TagSerializer
 
 
 class TagListView(generics.ListAPIView):
-    queryset = Tag.objects.prefetch_related(
-        Prefetch("articles", queryset=Article.published.all())
-    )
+    queryset = Tag.objects.filter(article__is_published=True).distinct()
     serializer_class = TagSerializer
 
 
