@@ -163,3 +163,4 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = split_env_var("CORS_ALLOWED_ORIGINS")
 
 TINYMCE_JS_URL = STATIC_URL + "tinymce/tinymce.min.js"
+TINYMCE_DEFAULT_CONFIG = {"plugins": "advlist list link image visualblocks code"}
