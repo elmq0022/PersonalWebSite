@@ -10,9 +10,10 @@ django-tinymce = "*"
 djangorestframework = "*"
 markdown = "*"
 django-filter = "*"   
-psycopg2 = "*"
+psycopg2-binary = "*"
 gunicorn = "*"
 django-cors-headers = "*"
+gevent = "*"
 
 [requires]
 python = "3.9"
