@@ -4,13 +4,13 @@ from tinymce.models import HTMLField
 
 
 class Tag(models.Model):
-    tag = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
     class Meta:
-        ordering = ["tag"]
+        ordering = ["name"]
 
     def __str__(self):
-        return self.tag
+        return self.name
 
 
 class PublishedManager(models.Manager):
